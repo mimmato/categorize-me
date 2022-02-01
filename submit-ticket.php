@@ -24,13 +24,10 @@
         <label for="msg" autofocus="">Message</label></br>
         <textarea name="msg" placeholder="Specify your request..." id="msg" required rows="5" cols="60"></textarea></br>
 
-        <input type="submit" value="Create">
+        <input type="submit" value="Submit ticket">
 
 </form>
 
-    <?php if ($msg): ?>
-    <p><?=$msg?></p>
-    <?php endif; ?>
 
 
 
