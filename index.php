@@ -1,4 +1,14 @@
-    <!DOCTYPE html>
+<?php
+$csvfile=file("data.csv");
+$data=[];
+foreach ($csvfile as $line){
+    $data[] = str_getcsv($line);
+
+}
+//print_r($data);
+?>
+
+<!DOCTYPE html>
     <html>
     	<head>
 
@@ -19,25 +29,47 @@
 
 
 
-<form>
+<div class="input-field-div">
+    <p align="center"> Email issues </p>
 
-            <label for="title">Email issues</label></br>
-            <input type="text" name="title" placeholder="This box will include information that the client puts in the submit-ticket.php form" id="title" required size="60" maxLength="60">
-        	<br>
+    <textarea readonly required type="text" id="email" name="email" rows="10" placeholder="This box will include information that the client puts in the submit-ticket.php form that relates to Email issues">
 
-            <label for="email">WordPress</label></br>
-            <input type="email" name="email" placeholder="This box will include information that the client puts in the submit-ticket.php form" id="email" required size="60" maxLength="60"></br>
+<?php if($_POST["requestType"]=="Email") {
+    echo "Name: " . $_POST ["name"], PHP_EOL;
+    echo "Email address: " . $_POST["email"], PHP_EOL;
+    echo "Issue description: " . $_POST["msg"], PHP_EOL;
+    }
+?>
+    </textarea></br>
+</div>
 
-            <label for="msg">Server error</label></br>
-            <input type="text" id="name" name="name" required required size="60" maxLength="60" placeholder="This box will include information that the client puts in the submit-ticket.php form"><br>
 
-</form>
 
-<?php echo $_POST["name"]; ?>
-<?php echo $_POST["email"]; ?>
-<?php echo $_POST["requestType"]; ?>
-<?php echo $_POST["msg"]; ?>
-<?php echo $_POST["msg"]; ?>
+<div class="input-field-div">
+    <p align="center"> WordPress </p>
+    <textarea readonly type="text" id="name" name="name" rows="10" placeholder="This box will include information that the client puts in the submit-ticket.php form that relates to WordPress">
+<?php if($_POST["requestType"]=="WordPress") {
+    echo "Name: " . $_POST ["name"], PHP_EOL;
+    echo "Email address: " . $_POST["email"], PHP_EOL;
+    echo "Issue description: " . $_POST["msg"], PHP_EOL;
+    }
+?>
+
+    </textarea></br>
+</div>
+
+<div class="input-field-div">
+    <p align="center"> Server error </p>
+    <textarea readonly type="text" name="errors" id="errors" rows="10" placeholder="This box will include information that the client puts in the submit-ticket.php form that relates to Server errors">
+
+<?php if($_POST["requestType"]=="ServerError") {
+    echo "Name: " . $_POST ["name"], PHP_EOL;
+    echo "Email address: " . $_POST["email"], PHP_EOL;
+    echo "Issue description: " . $_POST["msg"], PHP_EOL;
+    }
+?>
+    </textarea>
+</div>
 
 </body>
 </html>
