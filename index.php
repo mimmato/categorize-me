@@ -33,7 +33,11 @@
 
 </form>
 
-
+<?php echo $_POST["name"]; ?>
+<?php echo $_POST["email"]; ?>
+<?php echo $_POST["requestType"]; ?>
+<?php echo $_POST["msg"]; ?>
+<?php echo $_POST["msg"]; ?>
 
 </body>
 </html>
