@@ -1,12 +1,8 @@
 <?php
 $file = 'data.csv';
-if(is_file($file)){
     //string literal
     $data_to_write = "{$_POST["name"]},{$_POST["email"]},{$_POST["requestType"]},{$_POST["msg"]}" .PHP_EOL;
     file_put_contents($file, $data_to_write, FILE_APPEND);
-}
-
-    //    print_r($_POST) => data.csv
 
 $csvfile=file("data.csv");
 $data=[];
