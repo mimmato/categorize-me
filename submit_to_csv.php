@@ -1,8 +1,3 @@
-<?php
-
-    // print_r($_POST);
-?>
-
 <html>
     <head>
         <meta charset="utf-8">
@@ -17,14 +12,14 @@
     		</div>
     	</nav>
 
-        <?php
+<?php/*
             if(isset($_POST['submit'])){
                 $name=$_POST["name"];
                 $email=$_POST["email"];
                 $requestType=$_POST["requestType"];
                 $msg=$_POST["msg"];
             }
-        ?>
+*/?>
 
         <form class="form" action="index.php" method="POST">
 
