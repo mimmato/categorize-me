@@ -35,11 +35,10 @@ foreach ($csvfile as $line) {
 <?php
 foreach($data as $row){
     if($row[2]=="Email"){
-//        print_r($row);
         echo PHP_EOL;
-        echo "NAME: " . $row[0], PHP_EOL;
-        echo "ADDRESS: " . $row[1], PHP_EOL;
-        echo "MESSAGE: " . $row[3], PHP_EOL;
+        echo "Name: " . $row[0], PHP_EOL;
+        echo "Address: " . $row[1], PHP_EOL;
+        echo "Message: " . $row[3], PHP_EOL;
     }
 }
 ?>
@@ -54,10 +53,9 @@ foreach($data as $row){
 foreach($data as $row){
     if($row[2]=="WordPress"){
         echo PHP_EOL;
-        echo "NAME: " . $ro//        print_r($row);
-w[0], PHP_EOL;
-        echo "ADDRESS: " . $row[1], PHP_EOL;
-        echo "MESSAGE: " . $row[3], PHP_EOL;
+        echo "Name: " . $row[0], PHP_EOL;
+        echo "Address: " . $row[1], PHP_EOL;
+        echo "Message: " . $row[3], PHP_EOL;
     }
 }
 ?>
@@ -71,11 +69,10 @@ w[0], PHP_EOL;
 <?php
 foreach($data as $row){
     if($row[2]=="ServerError"){
-//        print_r($row);
         echo PHP_EOL;
-        echo "NAME: " . $row[0], PHP_EOL;
-        echo "ADDRESS: " . $row[1], PHP_EOL;
-        echo "MESSAGE: " . $row[3], PHP_EOL;
+        echo "Name: " . $row[0], PHP_EOL;
+        echo "Address: " . $row[1], PHP_EOL;
+        echo "Message: " . $row[3], PHP_EOL;
     }
 }
 ?>
